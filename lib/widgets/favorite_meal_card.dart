@@ -53,7 +53,7 @@ class _FavoriteMealCardState extends State<FavoriteMealCard> {
             mainAxisSize: MainAxisSize.min,
             children: [
               FavoriteButton(meals: widget.meals),
-              const SizedBox(width: 8),
+              const SizedBox(width: 12),
               AnimatedRotation(
                 turns: _isExpanded ? 0.5 : 0.0,
                 duration: const Duration(milliseconds: 200),
@@ -80,7 +80,7 @@ class _FavoriteMealCardState extends State<FavoriteMealCard> {
                       imageUrl: widget.meals.imageUrl,
                       fit: BoxFit.cover,
                       width: double.infinity.w,
-                      height: 200.h,
+                      height: 150.h,
                     ),
                   ),
                   SizedBox(height: 10.h),

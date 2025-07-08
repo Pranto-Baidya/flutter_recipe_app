@@ -52,6 +52,9 @@ class _MealScreenState extends State<MealScreen> {
                     hintStyle: theme.textTheme.titleMedium,
                     prefixIcon: Icon(Icons.search,color: theme.iconTheme.color,),
                 ),
+                onChanged: (query){
+                  Provider.of<RecipeProvider>(context,listen: false).getSearchedMeal(query);
+                },
                 onFieldSubmitted: (query){
                   if(_key.currentState!.validate()){
                     Provider.of<RecipeProvider>(context,listen: false).getSearchedMeal(query);
