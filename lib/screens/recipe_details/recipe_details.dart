@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:recipe_app/model/recipe_model.dart';
 
 class RecipeDetails extends StatelessWidget {
@@ -24,27 +23,27 @@ class RecipeDetails extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 10.h,),
+              SizedBox(height: 10),
               ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: CachedNetworkImage(
                   imageUrl: meals.imageUrl,
                   fit: BoxFit.cover,
-                  width: double.infinity.w,
-                  height: 200.h,
+                  width: double.infinity,
+                  height: 200,
                 ),
               ),
-              SizedBox(height: 10.h,),
+              SizedBox(height: 10,),
               Text('Ingredients',style: theme.textTheme.titleLarge?.copyWith(
                   fontWeight: FontWeight.bold
               ),),
-              SizedBox(height: 10.h,),
+              SizedBox(height: 10,),
               ...meals.ingredients.map((ingredient)=>Text('• $ingredient',style: theme.textTheme.titleMedium,)),
-              SizedBox(height: 10.h,),
+              SizedBox(height: 10,),
               Text('Instructions',style: theme.textTheme.titleLarge?.copyWith(
                   fontWeight: FontWeight.bold
               ),),
-              SizedBox(height: 10.h,),
+              SizedBox(height: 10,),
               Text(meals.instructions,style: theme.textTheme.titleMedium,)
             ],
           ),

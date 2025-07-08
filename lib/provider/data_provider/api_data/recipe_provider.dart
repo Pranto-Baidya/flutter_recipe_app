@@ -32,12 +32,9 @@ class RecipeProvider extends ChangeNotifier{
 
       _meals = await ApiService.searchMeals(query);
 
-      for(RecipeModel recipe in _meals){
-        await DBService.insertRecipe(recipe);
-      }
     }
     catch(_) {
-      _meals = await DBService.searchLocalRecipes(query);
+
     }
 
     finally{

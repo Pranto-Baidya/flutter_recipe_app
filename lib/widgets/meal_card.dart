@@ -1,7 +1,6 @@
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:recipe_app/model/recipe_model.dart';
 import 'package:recipe_app/screens/recipe_details/recipe_details.dart';
 import 'package:recipe_app/widgets/favorite_button.dart';
@@ -23,8 +22,8 @@ class _MealCardState extends State<MealCard> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 8),
       child: SizedBox(
-        width: double.infinity.w,
-        height: 200.h,
+        width: double.infinity,
+        height: 200,
         child: GestureDetector(
           onTap: (){
            Navigator.push(context, MaterialPageRoute(builder: (context)=>RecipeDetails(meals: widget.meals)));
@@ -39,8 +38,8 @@ class _MealCardState extends State<MealCard> {
                   child: CachedNetworkImage(
                       imageUrl: widget.meals.imageUrl,
                       fit: BoxFit.cover,
-                      width: double.infinity.w,
-                      height: 200.h,
+                      width: double.infinity,
+                      height: 200,
                   ),
                 ),
                 Positioned(
@@ -51,13 +50,13 @@ class _MealCardState extends State<MealCard> {
                     )
                 ),
                 Positioned(
-                  top: 55.h,
-                    bottom: 55.h,
-                    right: 25.w,
-                    left: 25.w,
+                  top: 55,
+                    bottom: 55,
+                    right: 25,
+                    left: 25,
                     child: Container(
-                      width: 250.w,
-                      height: 100.h,
+                      width: 250,
+                      height: 100,
                       decoration: BoxDecoration(
                         color: Colors.black54,
                         borderRadius: BorderRadius.circular(10)
@@ -67,9 +66,9 @@ class _MealCardState extends State<MealCard> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(widget.meals.name,textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontSize: 22.sp,fontWeight: FontWeight.w500,overflow: TextOverflow.ellipsis),),
-                            SizedBox(height: 5.h,),
-                            Text('Tap to view details',style: TextStyle(color: Colors.white,fontSize: 16.sp,fontWeight: FontWeight.w500,overflow: TextOverflow.ellipsis),)
+                            Text(widget.meals.name,textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.w500,overflow: TextOverflow.ellipsis),),
+                            SizedBox(height: 5,),
+                            Text('Tap to view details',style: TextStyle(color: Colors.white,fontSize: 16,fontWeight: FontWeight.w500,overflow: TextOverflow.ellipsis),)
                           ],
                         ),
                       )

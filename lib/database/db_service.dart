@@ -28,17 +28,7 @@ class DBService{
   }
 
   static Future<void> _createTable(Database db, int version)async{
-    await db.execute(
-      '''
-      CREATE TABLE recipes(
-       id TEXT PRIMARY KEY,
-       name TEXT,
-       imageUrl TEXT,
-       instructions TEXT,
-       ingredients TEXT
-      )
-      '''
-    );
+
     await db.execute(
         '''
         CREATE TABLE favorites(
@@ -52,25 +42,7 @@ class DBService{
     );
   }
 
-  static Future<void> insertRecipe(RecipeModel recipe)async{
-     final db = await getDB();
-     await db.insert('recipes', recipe.toMap(),conflictAlgorithm: ConflictAlgorithm.replace);
-  }
 
-  static Future<List<RecipeModel>> searchLocalRecipes(String query) async {
-    final db = await getDB();
-    final result = await db.query(
-      'recipes',
-      where: 'name LIKE ?',
-      whereArgs: ['%$query%'],
-    );
-    return result.map((e) => RecipeModel.fromMap(e)).toList();
-  }
-
-  static Future<void> deleteAllRecipes()async{
-    final db = await getDB();
-    await db.delete('recipes');
-  }
 
   //favorites section
 

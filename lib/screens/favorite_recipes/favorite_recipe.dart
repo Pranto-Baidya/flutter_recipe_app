@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:recipe_app/provider/data_provider/db_data/offline_recipe.dart';
 import 'package:recipe_app/widgets/favorite_meal_card.dart';
@@ -24,7 +23,7 @@ class _FavoriteRecipeState extends State<FavoriteRecipe> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      final provider = Provider.of<OfflineRecipeProvider>(context, listen: false);
+      Provider.of<OfflineRecipeProvider>(context, listen: false).loadFavorites();
 
     });
   }
@@ -41,8 +40,6 @@ class _FavoriteRecipeState extends State<FavoriteRecipe> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Favorite Meals',style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),),
-              SizedBox(height: 15.h,),
               TextFormField(
                 cursorColor: Colors.blue.shade400,
                 controller: _searchController,
@@ -59,14 +56,16 @@ class _FavoriteRecipeState extends State<FavoriteRecipe> {
                 ),
                 onChanged: (query){
                   Provider.of<OfflineRecipeProvider>(context,listen: false).searchOfflineRecipes(query);
-                  },
+                },
                 onFieldSubmitted: (query){
                   if(_key.currentState!.validate()){
                     Provider.of<OfflineRecipeProvider>(context,listen: false).searchOfflineRecipes(query);
                   }
                 },
               ),
-              SizedBox(height: 10.h,),
+              SizedBox(height: 25),
+              Text('Favorite Meals',style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),),
+              SizedBox(height: 15),
               Expanded(
                 child: Consumer<OfflineRecipeProvider>(
                   builder: (context, db, _) {

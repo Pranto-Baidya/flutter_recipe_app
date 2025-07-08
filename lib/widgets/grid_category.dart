@@ -1,7 +1,6 @@
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:recipe_app/model/category_model.dart';
 import 'package:recipe_app/screens/category_meals/category_meals.dart';
 
@@ -26,8 +25,8 @@ class GridCategory extends StatelessWidget {
             CachedNetworkImage(
                 imageUrl: category.categoryImage,
                 fit: BoxFit.contain,
-                width: double.infinity.w,
-                height: 120.h,
+                width: double.infinity,
+                height: 120,
             ),
             Positioned(
               top: 145,

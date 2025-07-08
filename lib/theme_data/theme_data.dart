@@ -1,59 +1,59 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 ThemeData lightTheme = ThemeData(
     scaffoldBackgroundColor: Colors.white,
     textTheme:  TextTheme(
       labelSmall: TextStyle(
           color: Colors.black,
-          fontSize: 11.sp
+          fontSize: 11
       ),
       labelMedium: TextStyle(
           color: Colors.black,
-          fontSize: 12.sp
+          fontSize: 12
       ),
       labelLarge: TextStyle(
           color: Colors.black,
-          fontSize: 14.sp
+          fontSize: 14
       ),
       titleSmall: TextStyle(
           color: Colors.black,
-          fontSize: 14.sp
+          fontSize: 14
       ),
       titleMedium: TextStyle(
           color: Colors.black,
-          fontSize: 16.sp
+          fontSize: 16
       ),
       titleLarge: TextStyle(
           color: Colors.black,
-          fontSize: 22.sp
+          fontSize: 22
       ),
       displaySmall: TextStyle(
           color: Colors.black,
           fontWeight: FontWeight.bold,
-          fontSize: 36.sp
+          fontSize: 36
       ),
       displayMedium: TextStyle(
           color: Colors.black,
-          fontSize: 45.sp
+          fontSize: 45
       ),
       displayLarge: TextStyle(
           color: Colors.black,
-          fontSize: 57.sp
+          fontSize: 57
       ),
       bodySmall: TextStyle(
           color: Colors.black,
-          fontSize: 12.sp
+          fontSize: 12
       ),
       bodyMedium: TextStyle(
           color: Colors.black,
-          fontSize: 14.sp
+          fontSize: 14
       ),
       bodyLarge: TextStyle(
           color: Colors.black,
-          fontSize: 16.sp
+          fontSize: 16
       ),
     ),
     listTileTheme: ListTileThemeData(
@@ -128,52 +128,52 @@ ThemeData darkTheme = ThemeData(
   textTheme: TextTheme(
     labelSmall: TextStyle(
         color: Colors.white,
-        fontSize: 11.sp
+        fontSize: 11
     ),
     labelMedium: TextStyle(
         color: Colors.white,
-        fontSize: 12.sp
+        fontSize: 12
     ),
     labelLarge: TextStyle(
         color: Colors.white,
-        fontSize: 14.sp
+        fontSize: 14
     ),
     titleSmall: TextStyle(
         color: Colors.white,
-        fontSize: 14.sp
+        fontSize: 14
     ),
     titleMedium: TextStyle(
         color: Colors.white,
-        fontSize: 16.sp
+        fontSize: 16
     ),
     titleLarge: TextStyle(
         color: Colors.white,
-        fontSize: 22.sp
+        fontSize: 22
     ),
     displaySmall: TextStyle(
         color: Colors.white,
         fontWeight: FontWeight.bold,
-        fontSize: 36.sp
+        fontSize: 36
     ),
     displayMedium: TextStyle(
         color: Colors.white,
-        fontSize: 45.sp
+        fontSize: 45
     ),
     displayLarge: TextStyle(
         color: Colors.white,
-        fontSize: 57.sp
+        fontSize: 57
     ),
     bodySmall: TextStyle(
         color: Colors.white,
-        fontSize: 12.sp
+        fontSize: 12
     ),
     bodyMedium: TextStyle(
         color: Colors.white,
-        fontSize: 14.sp
+        fontSize: 14
     ),
     bodyLarge: TextStyle(
         color: Colors.white,
-        fontSize: 16.sp
+        fontSize: 16
     ),
   ),
   listTileTheme: const ListTileThemeData(

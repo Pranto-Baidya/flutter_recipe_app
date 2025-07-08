@@ -33,6 +33,8 @@ class RecipeModel {
     );
   }
 
+  //Database Model
+
   factory RecipeModel.fromMap(Map<String,dynamic>map){
     return RecipeModel(
         id: map['id'],

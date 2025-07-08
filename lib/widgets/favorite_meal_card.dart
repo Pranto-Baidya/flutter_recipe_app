@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:recipe_app/model/recipe_model.dart';
 import 'package:recipe_app/widgets/favorite_button.dart';
 
@@ -79,29 +78,29 @@ class _FavoriteMealCardState extends State<FavoriteMealCard> {
                     child: CachedNetworkImage(
                       imageUrl: widget.meals.imageUrl,
                       fit: BoxFit.cover,
-                      width: double.infinity.w,
-                      height: 150.h,
+                      width: double.infinity,
+                      height: 150,
                     ),
                   ),
-                  SizedBox(height: 10.h),
+                  SizedBox(height: 10),
 
                   Text(
                     'Ingredients',
                     style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 10.h),
+                  SizedBox(height: 10),
                   ...widget.meals.ingredients.map(
                         (ingredient) => Text('• $ingredient', style: theme.textTheme.titleMedium),
                   ),
-                  SizedBox(height: 10.h),
+                  SizedBox(height: 10),
 
                   Text(
                     'Instructions',
                     style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 10.h),
+                  SizedBox(height: 10),
                   ConstrainedBox(
-                    constraints: BoxConstraints(maxHeight: 150.h),
+                    constraints: BoxConstraints(maxHeight: 150),
                     child: SingleChildScrollView(
                       child: Text(widget.meals.instructions, style: theme.textTheme.titleMedium),
                     ),

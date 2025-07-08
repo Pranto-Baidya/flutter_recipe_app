@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:recipe_app/provider/data_provider/api_data/recipe_provider.dart';
 import 'package:recipe_app/provider/data_provider/db_data/offline_recipe.dart';
@@ -30,18 +29,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
-    return ScreenUtilInit(
-      designSize: Size(360, 690),
-      minTextAdapt: true,
-      builder: (context, child) {
-        return MaterialApp(
+    return MaterialApp(
           theme: lightTheme,
           darkTheme: darkTheme,
           themeMode: themeProvider.themeMode,
           debugShowCheckedModeBanner: false,
-          home: SplashScreen(onToggle: themeProvider.toggleTheme)
+          home: SplashScreen(onToggle: themeProvider.toggleTheme), // ✅
         );
-      }
-    );
+
+
+
   }
 }

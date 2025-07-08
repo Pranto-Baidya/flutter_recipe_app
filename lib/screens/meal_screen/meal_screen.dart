@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:provider/provider.dart';
 
 import '../../provider/data_provider/api_data/recipe_provider.dart';
@@ -35,7 +35,7 @@ class _MealScreenState extends State<MealScreen> {
         key: _key,
         child: Column(
           children: [
-            SizedBox(height: 8.h,),
+            SizedBox(height: 8),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 8),
               child: TextFormField(
@@ -62,7 +62,7 @@ class _MealScreenState extends State<MealScreen> {
                 },
               ),
             ),
-            SizedBox(height: 8.h,),
+            SizedBox(height: 8),
             Expanded(
                 child: Consumer<RecipeProvider>(
                     builder: (context,api,_){
