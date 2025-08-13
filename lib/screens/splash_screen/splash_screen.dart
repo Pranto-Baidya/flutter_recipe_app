@@ -18,21 +18,20 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
 
-  @override
-  void initState() {
+ @override
+  void didChangeDependencies() {
    final theme = Provider.of<ThemeProvider>(context);
    final isDark = theme.themeMode == ThemeMode.dark;
 
    SystemChrome.setSystemUIOverlayStyle(
-     SystemUiOverlayStyle(
-       systemNavigationBarColor: isDark ? Color(0xFF1c1c1d) : Colors.white
-     )
+       SystemUiOverlayStyle(
+           systemNavigationBarColor: isDark ? Color(0xFF1c1c1d) : Colors.white
+       )
    );
-    Timer(Duration(seconds: 3), ()=>Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen(onToggle: widget.onToggle)
-            )
-        )
-    );
-    super.initState();
+   Timer(Duration(seconds: 3), ()=>Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen(onToggle: widget.onToggle)
+   )
+   )
+   );    super.didChangeDependencies();
   }
 
   @override

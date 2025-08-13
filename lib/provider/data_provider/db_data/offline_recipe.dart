@@ -27,12 +27,6 @@ class OfflineRecipeProvider extends ChangeNotifier{
 
   bool get inProgress => _inProgress;
 
-  void setInProgress(bool value) {
-    _inProgress = value;
-    notifyListeners();
-  }
-
-
   Future<void> loadFavorites()async{
     _inProgress =true;
     notifyListeners();
